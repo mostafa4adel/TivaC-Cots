@@ -1,30 +1,39 @@
 /*************************
  * FILE DESCRIPTION
  ***************************/
-/**  File   : FileName.h
- *   Module :      -
+/**  File   : IntCtrl_Types.h
+ *   Module : IntCtrl
  *
- *   Description:  -
+ *   Description:  header file for interrupt control
  *
  ***************************/
-#ifndef FileName_H
-#define FileName_H
+#ifndef IntCtrl_TYPES_H
+#define IntCtrl_TYPES_H
 
 /*************************
  * INCLUDES
  ***************************/
 
+#include "Std_Types.h"
+
 /*************************
  * GLOBAL CONSTANT MACROS
+ ***************************/
+
+/*************************
+ * GLOBAL FUNCTION MACROS
  **************************/
 
 /*************************
- * GLOBAL DATA PROTOTYPES
- ***************************/
-
-/*************************
  * GLOBAL DATA TYPES AND STRUCTURES
- ***************************/
+ *************************/
+typedef enum
+{
+
+} IntCtrl_InterruptType;
+
+//get the values from the vector table
+
 
 #endif
 /*************************

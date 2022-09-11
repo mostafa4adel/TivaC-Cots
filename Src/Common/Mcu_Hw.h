@@ -1,14 +1,14 @@
 /*************************
  * FILE DESCRIPTION
  ***************************/
-/**  File   : FileName.h
- *   Module :      -
+/**  File   : Mcu_hw.h.h
+ *   Module :   Mcu_hw
  *
- *   Description:  -
+ *   Description:  registers for the microcontroller
  *
  ***************************/
-#ifndef FileName_H
-#define FileName_H
+#ifndef MCU_HW_H
+#define MCU_HW_H
 
 /*************************
  * INCLUDES
@@ -17,6 +17,7 @@
 /*************************
  * GLOBAL CONSTANT MACROS
  **************************/
+ #define CORTEXM4_PERI_BASE_ADDR        0xE000E000
 
 /*************************
  * GLOBAL DATA PROTOTYPES
