@@ -14,9 +14,12 @@
  /*************************
  * INCLUDES
  ***************************/
+ #include "IntCtrl_Cfg.h"
  #include "IntCtrl.h"
+ 
  #include "Std_Types.h"
  #include "Mcu_Hw.h"
+ 
 
  /*************************
  * LOCAL DATA
@@ -41,7 +44,7 @@
  
  /*************************
  * \Syntax            :    void  IntCtrl_Init(void)
- * \Description       :    Intialize NVIC/SCB Module by parsing the configuration
+ * \Description       :    Set the grouping and sub grouping
  * 
  * \Sync\Async        :    Synchronous
  * \Reentrancy        :    Non Reentrant
@@ -50,17 +53,31 @@
  * \Return value      :    None
  * 
  * **************************/
- void IntCtrl_Init(void)
+
+//3.basepri NVIC/SCB 4.peri
+ void IntCtrl_voidInit(void)
  {
   //1. configure grouping/subgrouping system in apint register in scb
+  CORTEXM4_APINT = 0x05FA0000|(GROUPBITS << 7);
+ }
 
+ void IntCtrl_voidSetPriority(uint8 Copy_u8InterruptPosition, uint8 Copy_u8GroupPriority, uint8 Copy_u8SubPriority)
+ {
 
- //2. Assign Group/Subgroup priority in NVIC_PRIx and SCB_SYSPRIx Registers
+ }
 
+ void IntCtrl_voidEnableInterrupt(uint8 Copy_u8InterruptPotiotion)
+ {
 
-  //3. enable/disable based on user configuration in NVIC_ENx and SCB_Sys Registers
+ }
 
+ void IntCtrl_voidDisableInterrupt(uint8  Copy_u8InterruptPosition)
+ {
 
+ }
+
+ void IntCtrl_voidSetPendingFlag(uint8  Copy_u8InterruptPosition)
+ {
   
  }
 

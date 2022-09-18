@@ -1,38 +1,31 @@
 /*************************
  * FILE DESCRIPTION
  ***************************/
-/**  File   : IntCtrl_Types.h
- *   Module : IntCtrl
+/**  File   : MCU_Interface.h
+ *   Module : MCU 
  *
- *   Description:  header file for interrupt control
+ *   Description:  header file for MCU clock control
  *
  ***************************/
-#ifndef IntCtrl_TYPES_H
-#define IntCtrl_TYPES_H
+#ifndef MCU_Iterface_H
+#define MCU_Iterface_H
 
 /*************************
  * INCLUDES
  ***************************/
 
-#include "Std_Types.h"
+ #include "Std_Types.h"
+ #include "MCU_Types.h"
 
 /*************************
  * GLOBAL CONSTANT MACROS
  ***************************/
+ 
 
 /*************************
- * GLOBAL FUNCTION MACROS
- **************************/
-
-/*************************
- * GLOBAL DATA TYPES AND STRUCTURES
+ * GLOBAL FUNCTION PROTOTYPES
  *************************/
-typedef enum
-{
-
-} IntCtrl_InterruptType;
-
-//get the values from the vector table
+ 
 
 
 #endif
