@@ -10,13 +10,12 @@
  * INCLUDES
  * **************************/
 
- #include "MCU_Cfg.h"
- #include "MCU_interface.h"
- 
- 
+ #include "Bit_Math.h"
  #include "Std_Types.h"
  #include "Mcu_Hw.h"
- 
+
+ #include "MCU_Cfg.h"
+ #include "MCU_interface.h"
 
  /*************************
  * LOCAL DATA
@@ -38,7 +37,24 @@
  * GLOBAL FUNCTIONS
  ***************************/
 
+  void MCU_voidInitClock(void)
+  {
+   SYSCONTROL_RCC = 0;  //Reset Value
 
+    SYSCONTROL_RCC |= MOSCDIS<<0;
+    SYSCONTROL_RCC |= OSCSRC<<4;
+
+    SYSCONTROL_RCC |= USE_PLL<<11;
+    SYSCONTROL_RCC |= PLL_MODE<<13;
+
+    
+  }
+
+  void MCU_voidEnableGPIO(uint8 GP)
+  {   
+    if (GP <= 5)
+      SET_BIT( SYSCONTROL_RCGCPIO,GP);
+  }
 
   /*************************
  * END OF FILE

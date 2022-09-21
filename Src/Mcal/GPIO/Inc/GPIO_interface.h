@@ -1,21 +1,21 @@
 /*************************
  * FILE DESCRIPTION
  ***************************/
-/**  File   : MCU_Interface.h
- *   Module : MCU 
+/**  File   : GPIO_interface.h
+ *   Module : GPIO 
  *
- *   Description:  header file for MCU clock control
+ *   Description:  header file for GPIO 
  *
  ***************************/
-#ifndef MCU_Iterface_H
-#define MCU_Iterface_H
+#ifndef GPIO_INTERFACE_H
+#define GPIO_INTERFACE_H
 
 /*************************
  * INCLUDES
  ***************************/
 
  #include "Std_Types.h"
- #include "MCU_Types.h"
+ 
 
 /*************************
  * GLOBAL CONSTANT MACROS
@@ -25,10 +25,12 @@
 /*************************
  * GLOBAL FUNCTION PROTOTYPES
  *************************/
- 
- void MCU_voidInitClock(void);
+void GPIO_voidEnablePortAPins(uint8 Copy_uint8Pins);
 
- void MCU_voidEnableGPIO(uint8 GP);
+void GPIO_voidDirPortA(uint8 Copy_uint8Dir);
+
+void GPIO_voidWriteToPortA(uint8 Copy_uint8Pin);
+
 #endif
 /*************************
  * END OF FILE

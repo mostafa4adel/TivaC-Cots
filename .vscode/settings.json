@@ -1,6 +1,8 @@
 {
   "files.associations": {
     "std_types.h": "c",
-    "intctrl.h": "c"
+    "intctrl.h": "c",
+    "mcu_cfg.h": "c",
+    "mcu_interface.h": "c"
   }
 }

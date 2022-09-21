@@ -1,34 +1,35 @@
 /*************************
  * FILE DESCRIPTION
  ***************************/
-/**  File   : MCU_Interface.h
- *   Module : MCU 
+/**  File   : SYSTICK_interface.h
+ *   Module : SYSTICK
  *
- *   Description:  header file for MCU clock control
+ *   Description:  header file for SYSTICK
  *
  ***************************/
-#ifndef MCU_Iterface_H
-#define MCU_Iterface_H
+#ifndef SYSTICK_INTERFACE_H
+#define SYSTICK_INTERFACE_H
 
 /*************************
  * INCLUDES
  ***************************/
 
- #include "Std_Types.h"
- #include "MCU_Types.h"
+#include "Std_Types.h"
 
 /*************************
  * GLOBAL CONSTANT MACROS
  ***************************/
- 
 
 /*************************
  * GLOBAL FUNCTION PROTOTYPES
  *************************/
- 
- void MCU_voidInitClock(void);
 
- void MCU_voidEnableGPIO(uint8 GP);
+void SYSCK_voidInit();
+
+void SYSCK_uint32LoadValueInSec(uint32 time);
+
+void SYSCK_voidSetHandl(void (*ptr)(void));
+
 #endif
 /*************************
  * END OF FILE
